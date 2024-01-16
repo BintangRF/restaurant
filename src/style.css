@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/* Navbar */
+:root {
+  --mainColor: rgb(15, 23, 43);
+  --SecondaryColor: rgb(254, 161, 22);
+  --bgColor: rgb(255, 255, 255);
+  --num1: 0;
+  --num2: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.text-1 {
+  font-family: "Heebo", sans-serif !important;
+}
+
+.text-2 {
+  font-family: "Pacifico", cursive !important;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+/* Navbar */
+.transparent {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.solid {
+  background: var(--mainColor) !important;
+}
+
+h1.title {
+  color: var(--SecondaryColor);
+}
+
+.nav-links a:hover {
+  color: var(--SecondaryColor);
+}
+
+.btn-nav {
+  background: var(--SecondaryColor);
+  color: #fff;
+  width: 10rem;
+}
+
+@media (max-width: 767px) {
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 0;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    background: var(--mainColor);
+  }
+}
+/* Navbar */
+
+/* Hero */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url(../img/bg-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100%;
+}
+
+h1.hero,
+p.hero {
+  color: var(--bgColor);
+}
+
+img.hero {
+  animation: rotate 50s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-hero {
+  background: var(--SecondaryColor);
+  color: #fff;
+  width: 12rem;
+}
+/* Hero */
+
+/* Section */
+.card-section {
+  background: white;
+}
+
+.card-section {
+  background: var(--bgColor);
+}
+
+.card-section i {
+  color: var(--SecondaryColor);
+}
+
+.card-section p {
+  color: rgb(119, 119, 119);
+}
+
+.card-section:hover p,
+.card-section:hover i {
+  color: var(--bgColor) !important;
+}
+
+.card-section:hover {
+  background: var(--SecondaryColor);
+  color: var(--bgColor);
+}
+/* Section */
+
+/* About */
+.about-us {
+  color: var(--SecondaryColor);
+}
+
+.about-us hr {
+  border-color: var(--SecondaryColor);
+}
+
+h1.about {
+  color: var(--mainColor);
+}
+
+h1.about i {
+  color: var(--SecondaryColor);
+}
+
+#about p {
+  color: rgb(119, 119, 119);
+}
+
+.box {
+  border-left: 3px solid var(--SecondaryColor);
+}
+
+h1.number-1,
+h1.number-2 {
+  color: var(--SecondaryColor);
+}
+
+b {
+  color: var(--mainColor);
+}
+
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+h1.number-1 {
+  counter-reset: num var(--num1);
+  transition: content 1s;
+  animation: animateCounter1 5s forwards;
+}
+
+h1.number-1::before {
+  content: counter(num);
+}
+
+@keyframes animateCounter1 {
+  to {
+    --num1: 15;
+  }
+}
+
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+h1.number-2 {
+  counter-reset: num var(--num2);
+  transition: content 1s;
+  animation: animateCounter2 5s forwards;
+}
+
+h1.number-2::before {
+  content: counter(num);
+}
+
+@keyframes animateCounter2 {
+  to {
+    --num2: 50;
+  }
+}
+
+.btn-about {
+  background: var(--SecondaryColor);
+  color: #fff;
+  width: 12rem;
+}
+/* About */
+
+/* Menu */
+.menu {
+  color: var(--SecondaryColor);
+}
+
+.menu hr {
+  border-color: var(--SecondaryColor);
+}
+
+h1.menu {
+  color: var(--mainColor);
+}
+
+.active {
+  border-bottom: 2px solid var(--SecondaryColor);
+}
+
+.btn-menu i {
+  color: var(--SecondaryColor);
+}
+
+.btn-menu p {
+  color: rgb(119, 119, 119);
+}
+
+.btn-menu p b {
+  color: var(--mainColor);
+}
+/* Menu */
+
+/* Contact */
+.contact {
+  color: var(--SecondaryColor);
+}
+
+.form {
+  background: var(--mainColor);
+}
+
+.btn-form {
+  background: var(--SecondaryColor);
+  color: #fff;
+}
+
+label.name,
+label.email,
+label.date,
+label.people,
+label.request {
+  left: 10px;
+}
+
+label.name,
+label.email,
+label.request {
+  top: 20px;
+  font-size: 1.1rem;
+  color: rgb(23, 23, 23);
+}
+
+label.date,
+label.people {
+  font-size: 0.8rem;
+  top: 10px;
+  color: rgb(119, 119, 119);
+}
+
+label {
+  transition: transform 0.3s, font-size 0.3s, top 0.3s, color 0.3s;
+}
+
+.filled label.name,
+.filled label.email,
+.filled label.request {
+  transform: translateY(-18px);
+  font-size: 0.8rem;
+  top: 0;
+  color: rgb(119, 119, 119);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--SecondaryColor);
+}
+/* Contact */
+
+/* Chef */
+.chef {
+  color: var(--SecondaryColor);
+}
+
+.chef hr {
+  border-color: var(--SecondaryColor);
+}
+
+h1.chef {
+  color: var(--mainColor);
+}
+
+.card-chef-1,
+.card-chef-2,
+.card-chef-3,
+.card-chef-4 {
+  height: calc(100% - 50px);
+  transition: height 0.2s linear;
+}
+
+.card-chef-1:hover,
+.card-chef-2:hover,
+.card-chef-3:hover,
+.card-chef-4:hover {
+  height: calc(100% - 0px);
+}
+
+h1.chef-name {
+  color: var(--mainColor);
+}
+
+p.chef-name {
+  color: rgb(119, 119, 119);
+}
+
+img.chef {
+  transition: transform 0.2s linear;
+}
+
+.card-chef:hover img.chef {
+  transform: scale(1.1);
+}
+
+a.chef-link {
+  width: 3rem;
+  height: 3rem;
+  background: var(--SecondaryColor);
+  border-radius: 50px 50px 0px 0px;
+}
+/* Chef */
+
+/* Testimony */
+.testimony-card {
+  width: 1.9%;
+  background: var(--bgColor);
+  border: 1px solid rgb(171, 171, 171);
+  transition: background 0.3s linear;
+}
+
+i.testimony {
+  color: var(--SecondaryColor);
+}
+
+p.testimony {
+  color: rgb(119, 119, 119);
+}
+
+h2.testimony {
+  color: var(--mainColor);
+}
+
+.slick-center {
+  background: var(--SecondaryColor);
+  border: none;
+}
+
+.slick-center p,
+.slick-center i,
+.slick-center h2 {
+  color: var(--bgColor);
+}
+
+.slick-dots li.slick-active button::before {
+  color: var(--SecondaryColor) !important;
+}
+/* Testimony */
+
+/* Footer */
+footer {
+  background: var(--mainColor);
+}
+
+.footer {
+  color: var(--SecondaryColor);
+}
+
+.footer hr {
+  border-color: var(--SecondaryColor);
+}
+
+.list-none li {
+  color: var(--bgColor);
+}
+
+.column-1 li a {
+  transition: letter-spacing 0.2s linear;
+}
+.column-1 li a:hover {
+  letter-spacing: 1.1px;
+}
+
+.contact-footer a {
+  color: var(--bgColor);
+  border: 1px solid var(--bgColor);
+  width: 3rem;
+  height: 3rem;
+}
+
+.contact-footer a:hover {
+  color: var(--SecondaryColor);
+  border: 1px solid var(--SecondaryColor);
+  background: var(--bgColor);
+}
+
+.btn-footer {
+  background: var(--SecondaryColor);
+  color: #fff;
+  top: 70px;
+  right: 20px;
+}
+
+.footer-bottom-nav {
+  color: var(--bgColor);
+}
+
+.footer-bottom-nav p:nth-child(1),
+.footer-bottom-nav p:nth-child(2),
+.footer-bottom-nav p:nth-child(3) {
+  border-right: 0.2px solid rgb(119, 119, 119);
+}
+/* Footer */

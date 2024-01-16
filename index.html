@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <!-- Tailwind CSS -->
+    <link href="src/output.css" rel="stylesheet" />
+    <!-- My CSS -->
+    <link href="src/style.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet" />
+    <!-- Slick Js -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed z-50 w-screen p-4 px-10">
+      <div class="container flex items-center justify-between mx-auto">
+        <h1 class="text-4xl font-bold title">
+          <i class="mr-4 fa-solid fa-utensils"></i>Restaurant
+        </h1>
+
+        <!-- Hamburger Icon -->
+        <div class="hidden md:block">
+          <button id="toggleBtn" class="text-white focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div
+          class="flex justify-end gap-5 md:gap-0 md:hidden nav-links md:px-10 md:pb-5">
+          <a
+            href="#"
+            class="p-2 text-left text-white uppercase text-1 md:border-t md:border-white"
+            >Home</a
+          >
+          <a href="#about" class="p-2 text-left text-white uppercase text-1"
+            >About</a
+          >
+          <a href="#" class="p-2 text-left text-white uppercase text-1"
+            >Services</a
+          >
+          <a href="#" class="p-2 text-left text-white uppercase text-1">Menu</a>
+          <a href="#" class="p-2 text-left text-white uppercase text-1"
+            >Pages
+          </a>
+          <a href="#" class="p-2 text-left text-white uppercase text-1"
+            >Contact</a
+          >
+          <button class="px-6 py-2 uppercase rounded-md text-1 btn-nav">
+            Book a Table
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Hero -->
+    <section id="hero-section " class="bg-transparent hero-section">
+      <div
+        class="container flex flex-row items-center px-16 py-24 mx-auto lg:px-10 lg:flex-col">
+        <div
+          class="flex flex-col items-start pr-24 mb-0 text-left lg:mb-16 lg:text-center lg:items-center lg:flex-grow lg:w-5/5 lg:pr-0">
+          <h1 class="mb-4 font-bold hero text-7xl title-font sm:text-5xl">
+            Enjoy Our <br />
+            Delicious Meal
+          </h1>
+          <p class="mb-8 leading-relaxed text-1 hero">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur mollitia minima numquam optio ad inventore earum!
+            Minima quidem natus ipsum ab atque error suscipit consequuntur,
+            magni totam, fugiat illum repudiandae!
+          </p>
+          <div class="flex justify-center">
+            <button class="px-8 py-4 uppercase rounded-md text-1 btn-hero">
+              Book a Table
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-5/6">
+          <img
+            class="object-cover object-center rounded hero"
+            alt="hero"
+            src="img/hero.png" />
+        </div>
+      </div>
+    </section>
+    <!-- End of Hero -->
+
+    <!-- Section -->
+    <div
+      class="grid grid-cols-4 gap-4 px-16 py-16 lg:grid-cols-2 md:grid-cols-1">
+      <!-- Card -->
+      <div class="w-full p-5 shadow-2xl card-section">
+        <i class="mb-4 fa fa-3x fa-user-tie"></i>
+        <h1 class="py-2 text-2xl font-bold">Master Chefs</h1>
+        <p class="text-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          dignissimos.
+        </p>
+      </div>
+      <!-- Card -->
+      <div class="w-full p-5 shadow-2xl card-section">
+        <i class="mb-4 fa fa-3x fa-utensils"></i>
+        <h1 class="py-2 text-2xl font-bold">Quality Food</h1>
+        <p class="text-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          dignissimos.
+        </p>
+      </div>
+      <!-- Card -->
+      <div class="w-full p-5 shadow-2xl card-section">
+        <i class="mb-4 fa fa-3x fa-cart-plus"></i>
+        <h1 class="py-2 text-2xl font-bold">Online Order</h1>
+        <p class="text-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          dignissimos.
+        </p>
+      </div>
+      <!-- Card -->
+      <div class="w-full p-5 shadow-2xl card-section">
+        <i class="mb-4 fa fa-3x fa-headset"></i>
+        <h1 class="py-2 text-2xl font-bold">24/7 Service</h1>
+        <p class="text-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          dignissimos.
+        </p>
+      </div>
+    </div>
+    <!-- Section -->
+
+    <!-- About -->
+    <section id="about" class="px-16 py-16 bg-transparent">
+      <div
+        class="container flex flex-row items-center mx-auto lg:px-10 lg:flex-col">
+        <div class="w-full lg:w-5/6">
+          <div class="grid grid-cols-2 gap-4">
+            <img class="ml-auto w-60" src="img/about-1.jpg" alt="" />
+            <img class="mt-auto w-44" src="img/about-2.jpg" alt="" />
+            <img class="ml-auto w-44" src="img/about-3.jpg" alt="" />
+            <img class="w-60" src="img/about-4.jpg" alt="" />
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-start pl-24 mb-0 text-left lg:pl-0 lg:mb-16 lg:flex-grow lg:w-5/5 lg:pr-0">
+          <div class="flex items-center gap-3 about-us">
+            <p class="text-2">About Us</p>
+            <hr class="w-10 h-1" />
+          </div>
+          <h1 class="py-2 mb-4 text-5xl font-bold about title-font sm:text-5xl">
+            Welcome to <i class="fa fa-utensils me-2"></i>Restaurant
+          </h1>
+          <p class="mb-8 leading-relaxed text-1 about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur mollitia minima numquam optio ad inventore earum!
+            Minima quidem natus ipsum ab atque error suscipit consequuntur,
+            magni totam, fugiat illum repudiandae!
+          </p>
+          <p class="mb-8 leading-relaxed text-1 about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur mollitia minima numquam optio ad inventore earum!
+            Minima quidem natus ipsum ab atque error suscipit consequuntur,
+            magni totam, fugiat illum repudiandae!
+          </p>
+          <div class="grid grid-cols-2 gap-8 mb-5">
+            <div class="flex items-center gap-3 px-2 py-1 box">
+              <h1 class="relative w-12 text-5xl font-bold number-1"></h1>
+              <p class="ml-2 text-1">
+                Years of <br />
+                <b>EXPERIENCE</b>
+              </p>
+            </div>
+            <div class="flex items-center gap-3 px-2 py-1 box">
+              <h1 class="relative w-12 text-5xl font-bold number-2"></h1>
+              <p class="ml-2 text-1">
+                Popular <br />
+                <b>MASTER CHEFS</b>
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <button class="px-8 py-4 uppercase rounded-md text-1 btn-about">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of About -->
+
+    <!-- Menu -->
+    <section class="px-16 py-16">
+      <div class="flex items-center justify-center gap-3 text-center menu">
+        <hr class="w-10 h-1" />
+        <p class="text-xl text-2">Food Menu</p>
+        <hr class="w-10 h-1" />
+      </div>
+      <h1 class="my-3 text-5xl font-bold text-center menu">
+        Most Popular Items
+      </h1>
+
+      <div class="grid grid-cols-3 gap-20 m-auto w-96 justify-items-center">
+        <div
+          class="flex items-center gap-4 px-1 py-2 cursor-pointer btn-menu active"
+          onclick="changeActive(this)">
+          <i class="fa fa-coffee fa-2x"></i>
+          <p>Popular <br /><b>Breakfast</b></p>
+        </div>
+        <div
+          class="flex items-center gap-4 px-1 py-2 cursor-pointer btn-menu"
+          onclick="changeActive(this)">
+          <i class="fa fa-hamburger fa-2x"></i>
+          <p>Popular <br /><b>Breakfast</b></p>
+        </div>
+        <div
+          class="flex items-center gap-4 px-1 py-2 cursor-pointer btn-menu"
+          onclick="changeActive(this)">
+          <i class="fa fa-utensils fa-2x"></i>
+          <p>Popular <br /><b>Breakfast</b></p>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-wrap items-center gap-5 pt-20 justify-evenly md:justify-center">
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-1.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-2.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-3.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-4.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-5.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-6.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-7.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div class="flex items-center gap-5">
+          <img src="img/menu-8.jpg" alt="" />
+          <div>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-bold menu">Chicken Burger</h1>
+              <h2 class="text-xl font-bold menu">$115</h2>
+            </div>
+            <hr class="w-full h-1 my-2 border-gray-400" />
+            <p class="text-sm text-gray-700 text-1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Menu -->
+
+    <!-- Contact -->
+    <section class="py-16">
+      <div class="grid grid-cols-2 md:grid-cols-1">
+        <div
+          style="
+            background: url(img/video.jpg);
+            background-size: cover;
+            background-position: center;
+          "
+          class="w-full h-auto md:h-96"></div>
+        <div class="px-5 py-3 form">
+          <form action="" class="flex flex-col">
+            <div class="flex items-center gap-3 contact">
+              <p class="text-2">Reservation</p>
+              <hr class="w-10 h-1" />
+            </div>
+            <h1
+              class="py-2 mb-4 text-5xl font-bold text-white title-font sm:text-5xl">
+              Book A Table Online
+            </h1>
+            <div class="flex gap-2">
+              <div class="relative w-full">
+                <label
+                  for="name"
+                  class="absolute name"
+                  onclick="focusInput('name')"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-2 py-4 my-2 rounded-sm"
+                  onfocus="focusInput('name')"
+                  onblur="blurInput('name')" />
+              </div>
+              <div class="relative w-full">
+                <label
+                  for="email"
+                  class="absolute email"
+                  onclick="focusInput('email')"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-2 py-4 my-2 rounded-sm"
+                  onfocus="focusInput('email')"
+                  onblur="blurInput('email')" />
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <div class="relative w-full">
+                <label for="" class="absolute date">Date & Time</label>
+                <input
+                  type="datetime-local"
+                  class="w-full px-2 pb-4 my-2 rounded-sm pt-7"
+                  placeholder="Date & Time" />
+              </div>
+              <div class="relative w-full">
+                <label for="" class="absolute people">No of people</label>
+                <select
+                  name="people"
+                  id="people"
+                  class="w-full px-2 pt-8 pb-4 my-2 rounded-sm">
+                  <option value="People 1">People 1</option>
+                  <option value="People 2">People 2</option>
+                  <option value="People 3">People 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative w-full">
+              <label
+                for="request"
+                class="absolute request"
+                onclick="focusInput('request')">
+                Special Request</label
+              >
+              <textarea
+                id="request"
+                name="request"
+                class="w-full px-2 py-4 my-2"
+                cols="30"
+                rows="10"
+                style="resize: none"
+                onfocus="focusInput('request')"
+                onblur="blurInput('request')"></textarea>
+            </div>
+
+            <button class="px-6 py-4 uppercase rounded-sm text-1 btn-form">
+              Book Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End of Contact -->
+
+    <!-- Chef -->
+    <section id="chef" class="px-16 py-16">
+      <div class="flex items-center justify-center gap-3 text-center chef">
+        <hr class="w-10 h-1" />
+        <p class="text-xl text-2">Team Members</p>
+        <hr class="w-10 h-1" />
+      </div>
+      <h1 class="my-3 mb-10 text-5xl font-bold text-center chef">
+        Our Master Chefs
+      </h1>
+
+      <div class="grid grid-cols-4 gap-5 md:grid-cols-2 sm:grid-cols-1">
+        <!-- Card -->
+        <div class="px-6 pt-4 overflow-hidden shadow-xl card-chef card-chef-1">
+          <div class="flex flex-col items-center">
+            <div class="mb-5 overflow-hidden rounded-full">
+              <img class="chef" src="img/team-1.jpg" alt="" />
+            </div>
+            <h1 class="text-2xl font-bold chef-name">Fullname</h1>
+            <p class="text-1 chef-name">Designation</p>
+            <div class="flex gap-3 mt-8 chef-links">
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="px-6 pt-4 overflow-hidden shadow-xl card-chef card-chef-2">
+          <div class="flex flex-col items-center">
+            <div class="mb-5 overflow-hidden rounded-full">
+              <img class="chef" src="img/team-2.jpg" alt="" />
+            </div>
+            <h1 class="text-2xl font-bold chef-name">Fullname</h1>
+            <p class="text-1 chef-name">Designation</p>
+            <div class="flex gap-3 mt-8 chef-links">
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="px-6 pt-4 overflow-hidden shadow-xl card-chef card-chef-3">
+          <div class="flex flex-col items-center">
+            <div class="mb-5 overflow-hidden rounded-full">
+              <img class="chef" src="img/team-3.jpg" alt="" />
+            </div>
+            <h1 class="text-2xl font-bold chef-name">Fullname</h1>
+            <p class="text-1 chef-name">Designation</p>
+            <div class="flex gap-3 mt-8 chef-links">
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="px-6 pt-4 overflow-hidden shadow-xl card-chef card-chef-4">
+          <div class="flex flex-col items-center">
+            <div class="mb-5 overflow-hidden rounded-full">
+              <img class="chef" src="img/team-4.jpg" alt="" />
+            </div>
+            <h1 class="text-2xl font-bold chef-name">Fullname</h1>
+            <p class="text-1 chef-name">Designation</p>
+            <div class="flex gap-3 mt-8 chef-links">
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href=""
+                class="flex items-center justify-center text-white chef-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Chef -->
+
+    <!-- Testimony -->
+    <section id="testimony" class="px-16 py-16">
+      <div class="flex w-full carousel">
+        <!-- Card -->
+        <div class="flex flex-col gap-2 p-4 mx-5 testimony-card">
+          <p class="text-2xl text-1">
+            <i class="fa fa-quote-left fa-2x testimony"></i>
+          </p>
+          <p class="text-1 testimony">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            repellat soluta excepturi molestias laborum architecto.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/testimonial-1.jpg"
+              class="rounded-full"
+              width="14%"
+              alt="" />
+            <div>
+              <h2 class="text-xl font-bold testimony">Client Name</h2>
+              <p class="text-1 testimony">Profession</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="flex flex-col gap-2 p-4 mx-5 testimony-card">
+          <p class="text-2xl text-1">
+            <i class="fa fa-quote-left fa-2x testimony"></i>
+          </p>
+          <p class="text-1 testimony">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            repellat soluta excepturi molestias laborum architecto.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/testimonial-2.jpg"
+              class="rounded-full"
+              width="14%"
+              alt="" />
+            <div>
+              <h2 class="text-xl font-bold testimony">Client Name</h2>
+              <p class="text-1 testimony">Profession</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="flex flex-col gap-2 p-4 mx-5 testimony-card">
+          <p class="text-2xl text-1">
+            <i class="fa fa-quote-left fa-2x testimony"></i>
+          </p>
+          <p class="text-1 testimony">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            repellat soluta excepturi molestias laborum architecto.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/testimonial-3.jpg"
+              class="rounded-full"
+              width="14%"
+              alt="" />
+            <div>
+              <h2 class="text-xl font-bold testimony">Client Name</h2>
+              <p class="text-1 testimony">Profession</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <div class="flex flex-col gap-2 p-4 mx-5 testimony-card">
+          <p class="text-2xl text-1">
+            <i class="fa fa-quote-left fa-2x testimony"></i>
+          </p>
+          <p class="text-1 testimony">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            repellat soluta excepturi molestias laborum architecto.
+          </p>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/testimonial-4.jpg"
+              class="rounded-full"
+              width="14%"
+              alt="" />
+            <div>
+              <h2 class="text-xl font-bold testimony">Client Name</h2>
+              <p class="text-1 testimony">Profession</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Testimony -->
+
+    <!-- Footer -->
+    <footer class="container px-16 py-16 pb-8 mx-auto">
+      <div class="grid grid-cols-4 gap-4 lg:grid-cols-2 md:grid-cols-1">
+        <!-- Column 1 -->
+        <nav class="mb-10 list-none column-1">
+          <div class="flex items-center gap-3 footer">
+            <p class="mb-3 text-2xl text-2">Company</p>
+            <hr class="w-10 h-1" />
+          </div>
+          <li>
+            <i class="mr-2 text-sm fas fa-angle-right"></i>
+            <a class="text-lg cursor-pointer text-1"> About Us</a>
+          </li>
+          <li>
+            <i class="mr-2 text-sm fas fa-angle-right"></i>
+            <a class="text-lg cursor-pointer text-1"> Contact Us</a>
+          </li>
+          <li>
+            <i class="mr-2 text-sm fas fa-angle-right"></i>
+            <a class="text-lg cursor-pointer text-1"> Reservation</a>
+          </li>
+          <li>
+            <i class="mr-2 text-sm fas fa-angle-right"></i>
+            <a class="text-lg cursor-pointer text-1"> Privacy Policy</a>
+          </li>
+          <li>
+            <i class="mr-2 text-sm fas fa-angle-right"></i>
+            <a class="text-lg cursor-pointer text-1"> Terms & Condition</a>
+          </li>
+        </nav>
+
+        <!-- Column 2 -->
+        <nav class="mb-10 list-none">
+          <div class="flex items-center gap-3 footer">
+            <p class="mb-3 text-2xl text-2">Contact</p>
+            <hr class="w-10 h-1" />
+          </div>
+          <li>
+            <i class="mr-2 text-sm fas fa-map-marker-alt"></i>
+            <a class="text-lg text-1"> 123 Street, New York, USA</a>
+          </li>
+          <li>
+            <i class="mr-2 text-sm fas fa-phone alt"></i>
+            <a class="text-lg text-1"> +012 345 67890</a>
+          </li>
+          <li>
+            <i class="mr-2 text-sm fas fa-envelope"></i>
+            <a class="text-lg text-1"> info@example.com</a>
+          </li>
+          <div class="flex gap-3 mt-8 contact-footer">
+            <a
+              href=""
+              class="flex items-center justify-center text-xl rounded-full"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href=""
+              class="flex items-center justify-center text-xl rounded-full"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href=""
+              class="flex items-center justify-center text-xl rounded-full"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href=""
+              class="flex items-center justify-center text-xl rounded-full"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </nav>
+
+        <!-- Column 3 -->
+        <nav class="mb-10 list-none">
+          <div class="flex items-center gap-3 footer">
+            <p class="mb-3 text-2xl text-2">Opening</p>
+            <hr class="w-10 h-1" />
+          </div>
+          <li>
+            <a class="text-lg text-1">Monday - Saturday</a>
+          </li>
+          <li>
+            <a class="text-sm text-1">09.AM - 09.PM</a>
+          </li>
+          <li class="mt-5">
+            <a class="text-lg text-1">Sunday</a>
+          </li>
+          <li>
+            <a class="text-sm text-1">10.AM - 08.PM</a>
+          </li>
+        </nav>
+
+        <!-- Column 4 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 footer">
+            <p class="mb-3 text-2xl text-2">Newsletter</p>
+            <hr class="w-10 h-1" />
+          </div>
+
+          <div
+            class="relative flex items-end justify-start md:flex-wrap flex-nowrap">
+            <div class="relative w-auto mr-4 sm:w-40 sm:mr-0">
+              <p class="w-full my-2 text-sm text-left text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                qui.
+              </p>
+              <input
+                type="text"
+                id="name"
+                class="w-full px-2 py-4 my-2 rounded-sm" />
+            </div>
+            <button
+              class="absolute px-4 py-2 uppercase rounded-sm text-1 btn-footer">
+              Signup
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between mt-4 footer-bottom">
+        <p class="text-white text-1">Made by BintangRF</p>
+        <div class="flex items-center footer-bottom-nav">
+          <p class="px-4 py-1 text-xl">Home</p>
+          <p class="px-4 py-1 text-xl">Cookies</p>
+          <p class="px-4 py-1 text-xl">Help</p>
+          <p class="px-4 py-1 text-xl">FAQs</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- my script -->
+    <script src="script/script.js"></script>
+
+    <!-- Slick Js -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Carousel -->
+    <script>
+      $(document).ready(function () {
+        $(".carousel").slick({
+          centerMode: true,
+          slidesToShow: 3,
+          variableWidth: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 1063,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 1,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+  </body>
+</html>
